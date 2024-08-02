@@ -41,33 +41,52 @@
 <body>
     <script>
         function getQueryParam(param) {
-            const urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get(param);
+            const params = new URLSearchParams(window.location.search);
+            return params.has(param) ? params.get(param) : "---";
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("cliente").textContent = getQueryParam("cliente");
-            document.getElementById("nombre_comercial").textContent = getQueryParam("nombre_comercial");
-            document.getElementById("operador").textContent = getQueryParam("operador");
-            document.getElementById("fecha").textContent = getQueryParam("fecha");
-            document.getElementById("precio_3_meses").textContent = getQueryParam("precio_3_meses");
-            document.getElementById("precio_4_12_meses").textContent = getQueryParam("precio_4_12_meses");
-            document.getElementById("precio_despues_ofertas").textContent = getQueryParam("precio_despues_ofertas");
-            document.getElementById("total_descuentos").textContent = getQueryParam("total_descuentos");
-            document.getElementById("servicios").textContent = getQueryParam("servicios");
-            document.getElementById("terminal").textContent = getQueryParam("terminal");
-            document.getElementById("modelo").textContent = getQueryParam("modelo");
-            document.getElementById("condiciones_terminal").textContent = getQueryParam("condiciones_terminal");
-            document.getElementById("tienda").textContent = getQueryParam("tienda");
-            document.getElementById("tienda_telefono").textContent = getQueryParam("tienda_telefono");
-            document.getElementById("direccion_completa").textContent = getQueryParam("direccion_completa");
-            document.getElementById("foto_logo").textContent = getQueryParam("foto_logo");
+            var cliente = getQueryParam("cliente");
+            var nombre_comercial = getQueryParam("nombre_comercial");
+            var operador = getQueryParam("operador");
+            var fecha = getQueryParam("fecha");
+            var precio_3_meses = getQueryParam("precio_3_meses");
+            var precio_4_12_meses = getQueryParam("precio_4_12_meses");
+            var precio_despues_ofertas = getQueryParam("precio_despues_ofertas");
+            var total_descuentos = getQueryParam("total_descuentos");
+            var servicios = getQueryParam("servicios");
+            var terminal = getQueryParam("terminal");
+            var modelo = getQueryParam("modelo");
+            var condiciones_terminal = getQueryParam("condiciones_terminal");
+            var tienda = getQueryParam("tienda");
+            var tienda_telefono = getQueryParam("tienda_telefono");
+            var direccion_completa = getQueryParam("direccion_completa");
+            var foto_logo = getQueryParam("foto_logo");
 
+            document.getElementById("cliente").textContent = cliente;
+            document.getElementById("nombre_comercial").textContent = nombre_comercial;
+            document.getElementById("operador").textContent = operador;
+            document.getElementById("fecha").textContent = fecha;
+            document.getElementById("precio_3_meses").textContent = precio_3_meses;
+            document.getElementById("precio_4_12_meses").textContent = precio_4_12_meses;
+            document.getElementById("precio_despues_ofertas").textContent = precio_despues_ofertas;
+            document.getElementById("total_descuentos").textContent = total_descuentos;
+            document.getElementById("servicios").textContent = servicios;
+            document.getElementById("terminal").textContent = terminal;
+            document.getElementById("modelo").textContent = modelo;
+            document.getElementById("condiciones_terminal").textContent = condiciones_terminal;
+            document.getElementById("tienda").textContent = tienda;
+            document.getElementById("tienda_telefono").textContent = tienda_telefono;
+            document.getElementById("direccion_completa").textContent = direccion_completa;
+            document.getElementById("foto_logo").src = foto_logo;
+
+            // Función para abrir ventana de impresión
+            window.print();
         });
     </script>
 
     <p class="right-align">
-        <img id="foto_logo" src="<<Foto logo>>" alt="Logo" style="max-height: 50px;">
+        <img id="foto_logo" src="" alt="Logo" style="max-height: 50px;">
     </p>
     <hr>
     <p class="right-align">
@@ -116,6 +135,4 @@
     <p class="right-align"><strong><span style="font-size:12pt;">&nbsp; &nbsp; &nbsp;</span></strong><strong><span style="font-size:11pt;">CLIENTE&nbsp;</span></strong><strong><span style="font-size:12pt;">&nbsp; &nbsp; &nbsp; &nbsp;</span></strong></p>
     <p><strong><span style="font-size:11pt;" id="tienda"></span></strong></p>
     <p><span style="font-size:10pt;" id="tienda_telefono"></span></p>
-    <p><span style="font-size:10pt;" id="direccion_completa"></span></p>
-</body>
-</html>
+    <p><span style="font-size:10pt;" id="direccion
