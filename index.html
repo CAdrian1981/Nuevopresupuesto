@@ -7,6 +7,9 @@
         body {
             font-family: Arial, sans-serif;
             color: #000;
+            max-width: 210mm; /* Limitar el ancho al de un folio A4 */
+            margin: auto; /* Centrar el contenido */
+            padding: 20px; /* Añadir un poco de padding para que el contenido no toque los bordes */
         }
         .right-align {
             text-align: right;
@@ -35,6 +38,12 @@
             width: 600px;
             margin: 0 auto;
             text-align: center;
+        }
+                @media print {
+            body {
+                width: 100%; /* Asegurarse de que se imprima en el ancho completo de la página */
+                margin: 0; /* Eliminar márgenes en la impresión */
+            }
         }
     </style>
 </head>
