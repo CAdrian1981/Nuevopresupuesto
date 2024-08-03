@@ -58,6 +58,13 @@
             return params.has(param) ? params.get(param) : "---";
         }
 
+        function formatCurrency(value) {
+            if (!value || isNaN(value)) {
+                return "0,00€";
+            }
+            return parseFloat(value).toFixed(2).replace('.', ',') + "€";
+        }
+
         document.addEventListener("DOMContentLoaded", function() {
             var nombre_comercial = getQueryParam("nombre_comercial");
             document.getElementById("nombre_comercial").textContent = nombre_comercial;
@@ -72,11 +79,13 @@
                 document.getElementById("foto_logo").src = foto_logo;
             }
 
-            var precio_3meses = getQueryParam("precio_3meses");
+            var precio_3meses = formatCurrency(getQueryParam("precio_3meses"));
             document.getElementById("precio_3meses").textContent = precio_3meses;
-            var precio_mes4_mes12 = getQueryParam("precio_mes4_mes12");
+
+            var precio_mes4_mes12 = formatCurrency(getQueryParam("precio_mes4_mes12"));
             document.getElementById("precio_mes4_mes12").textContent = precio_mes4_mes12;
-            var precio_despues_ofertas = getQueryParam("precio_despues_ofertas");
+
+            var precio_despues_ofertas = formatCurrency(getQueryParam("precio_despues_ofertas"));
             document.getElementById("precio_despues_ofertas").textContent = precio_despues_ofertas;
             var total_descuentos = getQueryParam("total_descuentos");
             document.getElementById("total_descuentos").textContent = total_descuentos;
