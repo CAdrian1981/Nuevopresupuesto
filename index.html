@@ -50,34 +50,37 @@
             document.getElementById("nombre_comercial").textContent = nombre_comercial;
             var fecha = getQueryParam("fecha");
             document.getElementById("fecha").textContent = fecha;
-            var fecha = getQueryParam("foto_logo");
-            document.getElementById("foto_logo").src = foto_logo;
-            var fecha = getQueryParam("precio_3meses");
+            
+            var foto_logo = getQueryParam("foto_logo");
+            try {
+                var fotoLogoObj = JSON.parse(foto_logo);
+                document.getElementById("foto_logo").src = fotoLogoObj.Url;
+            } catch (e) {
+                document.getElementById("foto_logo").src = foto_logo;
+            }
+
+            var precio_3meses = getQueryParam("precio_3meses");
             document.getElementById("precio_3meses").textContent = precio_3meses;
-            var fecha = getQueryParam("precio_mes4_mes12");
+            var precio_mes4_mes12 = getQueryParam("precio_mes4_mes12");
             document.getElementById("precio_mes4_mes12").textContent = precio_mes4_mes12;
-            var fecha = getQueryParam("precio_despues_ofertas");
+            var precio_despues_ofertas = getQueryParam("precio_despues_ofertas");
             document.getElementById("precio_despues_ofertas").textContent = precio_despues_ofertas;
-            var fecha = getQueryParam("total_descuentos");
+            var total_descuentos = getQueryParam("total_descuentos");
             document.getElementById("total_descuentos").textContent = total_descuentos;
-            var fecha = getQueryParam("nombre_fiscal");
+            var nombre_fiscal = getQueryParam("nombre_fiscal");
             document.getElementById("nombre_fiscal").textContent = nombre_fiscal;
-            var fecha = getQueryParam("nif");
+            var nif = getQueryParam("nif");
             document.getElementById("nif").textContent = nif;
-            var fecha = getQueryParam("tienda_direccion");
+            var tienda_direccion = getQueryParam("tienda_direccion");
             document.getElementById("tienda_direccion").textContent = tienda_direccion;
-            var fecha = getQueryParam("mail");
+            var mail = getQueryParam("mail");
             document.getElementById("mail").textContent = mail;
-            var fecha = getQueryParam("tienda");
+            var tienda = getQueryParam("tienda");
             document.getElementById("tienda").textContent = tienda;
-            var fecha = getQueryParam("tienda_telefono");
+            var tienda_telefono = getQueryParam("tienda_telefono");
             document.getElementById("tienda_telefono").textContent = tienda_telefono;
-            var fecha = getQueryParam("direccion_completa");
+            var direccion_completa = getQueryParam("direccion_completa");
             document.getElementById("direccion_completa").textContent = direccion_completa;
-            // Puedes añadir más asignaciones aquí si lo deseas
-            // Ejemplo:
-            // var fecha = getQueryParam("fecha");
-            // document.getElementById("fecha").textContent = fecha;
 
             // Función para abrir ventana de impresión
             window.print();
