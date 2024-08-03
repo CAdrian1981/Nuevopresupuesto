@@ -52,16 +52,16 @@
             document.getElementById("fecha").textContent = fecha;
             var fecha = getQueryParam("foto_logo");
             document.getElementById("foto_logo").textContent = foto_logo;
-            var fecha = getQueryParam("Precio_3meses");
-            document.getElementById("Precio_3meses").textContent = Precio_3meses;
-            var fecha = getQueryParam("Precio_mes4_mes12");
-            document.getElementById("Precio_mes4_mes12").textContent = Precio_mes4_mes12;
-            var fecha = getQueryParam("Precio_despues_ofertas");
-            document.getElementById("Precio_despues_ofertas").textContent = Precio_despues_ofertas;
+            var fecha = getQueryParam("precio_3meses");
+            document.getElementById("precio_3meses").textContent = precio_3meses;
+            var fecha = getQueryParam("precio_mes4_mes12");
+            document.getElementById("precio_mes4_mes12").textContent = precio_mes4_mes12;
+            var fecha = getQueryParam("precio_despues_ofertas");
+            document.getElementById("precio_despues_ofertas").textContent = precio_despues_ofertas;
             var fecha = getQueryParam("total_descuentos");
             document.getElementById("total_descuentos").textContent = total_descuentos;
-            var fecha = getQueryParam("NOMBRE_FISCAL");
-            document.getElementById("NOMBRE_FISCAL").textContent = NOMBRE_FISCAL;
+            var fecha = getQueryParam("nombre_fiscal");
+            document.getElementById("nombre_fiscal").textContent = nombre_fiscal;
             var fecha = getQueryParam("nif");
             document.getElementById("nif").textContent = nif;
             var fecha = getQueryParam("tienda_direccion");
@@ -92,9 +92,9 @@
         <span style="font-size:10pt;" id="fecha"></span>
     </p>
     <p><strong><span style="font-size:11pt;">Hola <span id="nombre_comercial"></span></span></strong></p>
-    <p class="right-align"><span style="font-size:10pt;">Esta oferta durante los 3 primeros meses tendrá un precio de <span id="Precio_3meses"></span></span></p>
-    <p class="right-align"><span style="font-size:10pt;">Del mes 4 al mes 12 será de <span id="Precio_mes4_mes12"></span></span></p>
-    <p class="right-align"><span style="font-size:10pt;">y después de las ofertas <strong><span style="font-size:10pt;" id="Precio_despues_ofertas"></span></strong></span></p>
+    <p class="right-align"><span style="font-size:10pt;">Esta oferta durante los 3 primeros meses tendrá un precio de <span id="precio_3meses"></span></span></p>
+    <p class="right-align"><span style="font-size:10pt;">Del mes 4 al mes 12 será de <span id="precio_mes4_mes12"></span></span></p>
+    <p class="right-align"><span style="font-size:10pt;">y después de las ofertas <strong><span style="font-size:10pt;" id="precio_despues_ofertas"></span></strong></span></p>
     <p class="right-align"><span style="font-size:10pt;" id="total_descuentos"></span></p>
 
     <h2><strong><span style="font-size:10pt;">A continuación, te detallamos las características del producto consultado:</span></strong></h2>
@@ -122,7 +122,7 @@
     </table>
 
     <p class="terms">TÉRMINOS Y CONDICIONES DE PROTECCIÓN DE DATOS</p>
-    <p class="terms">Los datos facilitados a través del formulario serán tratados por el responsable del tratamiento <span id="NOMBRE_FISCAL"></span>., con <span id="nif"></span>, <span id="tienda_direccion"></span></p>
+    <p class="terms">Los datos facilitados a través del formulario serán tratados por el responsable del tratamiento <span id="nombre_fiscal"></span>., con <span id="nif"></span>, <span id="tienda_direccion"></span></p>
     <p class="terms">Atendiendo a su petición de solicitud de presupuesto, sus datos serán tratados con la finalidad de información sobre productos y servicios de nuestras ofertas por cualquier medio, electrónico y no electrónico.</p>
     <p class="terms">Puede retirar su consentimiento al envío de nuevas comunicaciones comerciales, de forma gratuita, enviando un correo electrónico a <span id="mail"></span>.</p>
     <p class="terms">Los datos deberán ser veraces, exactos y actualizados. No está permitido que se comuniquen falsos datos, salvo obligación legal o necesidad necesaria para la consecución de las finalidades antes indicadas.</p>
