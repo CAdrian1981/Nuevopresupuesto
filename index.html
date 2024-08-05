@@ -114,6 +114,9 @@
             var direccion_completa = getQueryParam("direccion_completa");
             document.getElementById("direccion_completa").textContent = direccion_completa;
 
+            var direccion_completa = getQueryParam("cplocalidad");
+            document.getElementById("cplocalidad").textContent = cplocalidad;
+
             // Función para abrir ventana de impresión
             window.print();
         });
@@ -166,5 +169,6 @@
     <class="compact-text"><strong><span style="font-size:11pt;" id="tienda"></span></strong><br>
     <span style="font-size:10pt;" id="tienda_telefono"></span><br>
     <span style="font-size:10pt;" id="direccion_completa"></span>
+    <span style="font-size:10pt;" id="cplocalidad"></span>
 </body>
 </html>
